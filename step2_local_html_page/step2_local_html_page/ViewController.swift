@@ -26,10 +26,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView(frame: view.bounds, configuration: configuration)
         
         if let theWebView = webView{
-            
-            let url = NSURL(string: "file:///www/index.html")
-            let dirUrl = NSURL(string: "file:///www/")
-            theWebView.loadFileURL(url!, allowingReadAccessToURL: dirUrl!)
+            let url = NSBundle.mainBundle().URLForResource("index", withExtension:"html")
+            theWebView.loadFileURL(url!, allowingReadAccessToURL: url!)
 
             theWebView.navigationDelegate = self
             view.addSubview(theWebView)
