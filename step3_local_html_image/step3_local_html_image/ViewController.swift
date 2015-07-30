@@ -26,6 +26,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView = WKWebView(frame: view.bounds, configuration: configuration)
         
         if let theWebView = webView{
+            //Note that www is now a folder (blue) not a group (yellow), do you know the difference between the two?
             let url = NSBundle.mainBundle().URLForResource("index", withExtension:"html", subdirectory: "www")
             theWebView.loadFileURL(url!, allowingReadAccessToURL: url!)
             
