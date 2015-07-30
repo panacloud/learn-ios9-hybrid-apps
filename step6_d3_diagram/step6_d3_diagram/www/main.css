@@ -1,0 +1,36 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+       position: relative;
+       width: 960px;
+       height: 500px;
+       padding-top: 300px;
+}
+
+form {
+    position: absolute;
+    top: 10em;
+    left: 5em;
+}
+
+path {
+    fill-rule: evenodd;
+    stroke: #333;
+    stroke-width: 2px;
+}
+
+.sun path {
+    fill: #6baed6;
+}
+
+.planet path {
+    fill: #9ecae1;
+}
+
+.annulus path {
+    fill: #c6dbef;
+}
+
+@-ms-viewport{
+    width: device-width;
+}
+
